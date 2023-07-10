@@ -1,0 +1,10 @@
+creating trains table
+ create table trains(id int primary key auto_increment, train_name varchar(200) not null, source varchar(100) not null, destination varchar(100) not null, seat_capacity int not null, arrival_time_at_source time not null, arrival_time_at_destination time not null);
+
+creating table for the users 
+create table users(user_id int primary key auto_increment, username varchar(100), password varchar(50), email varchar(500));
+this table will be used for user register and login process 
+
+
+creating table user_booking_details to store the booking data of the user 
+create table user_booking_details(booking_id int primary key auto_increment, train_id int, train_name varchar(200), user_id int, no_of_seats int, seat_numbers json, arrival_time_at_source time, arrival_time_at_destination time);
